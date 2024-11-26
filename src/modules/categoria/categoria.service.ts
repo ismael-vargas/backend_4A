@@ -24,11 +24,11 @@ export class CategoriaService {
     return `This action returns a #${id} categoria`;
   }
 
-  update(id: number, updateCategoriaDto: UpdateCategoriaDto) {
-    return `This action updates a #${id} categoria`;
+ async update(id: number, updateCategoriaDto: UpdateCategoriaDto) {
+    return await this.categoriaRepository.update(id,updateCategoriaDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} categoria`;
+  async remove(id: number) {
+    return await this.categoriaRepository.delete(id);
   }
 }
