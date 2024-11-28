@@ -5,7 +5,7 @@ import { UpdateCategoriaDto } from './dto/update-categoria.dto';
 import { ApiTags } from '@Nestjs/swagger';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
-@UseGuards(JwtAuthGuard)
+//@UseGuards(JwtAuthGuard)
 @ApiTags('categoria')
 @Controller('categoria')
 export class CategoriaController {

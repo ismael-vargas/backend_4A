@@ -2,9 +2,9 @@ POST http://127.0.0.1:3000/auth/register
 Content-Type: application/json 
 
 {
-    "name":"isma",
-    "email":"casae@gmail.com",
-    "password": "123401"
+    "name":"linavargas",
+    "mail":"lina@gmail.com",
+    "password": "123456"
 }
 
 ### login sin conexion a BDD
@@ -12,13 +12,13 @@ POST http://127.0.0.1:3000/auth/login
 Content-Type: application/json 
 
 {
-    "name":"lyzon",
-    "email":"willaim@jm.cep",
-    "password": "1134578"
+    "name":"linavargas",
+    "email":"lina@gmail.com",
+    "password": "123456"
 }
 
 
 ### users
 
 GET http://127.0.0.1:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3Mjk5OTk5NjUsImV4cCI6MTczMDAwMDAyNX0.OUt2wUIu_QiP6fXHNBUXIMKwNMcLC1R3umKNcWOmoWA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpbmFAZ21haWwuY29tIiwiaWQiOjksImlhdCI6MTczMjc0MDU3MSwiZXhwIjoxNzMyNzQwNjMxfQ.LLhoRGa4qmcTFuH5GtZxtW60_Xy8Yh4NhgzBPM-BEAo

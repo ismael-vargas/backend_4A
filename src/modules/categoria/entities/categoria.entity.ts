@@ -5,10 +5,10 @@ import { Column,Entity,OneToMany,PrimaryGeneratedColumn } from "typeorm";
 export class Categoria {
     @PrimaryGeneratedColumn()
     id:number;
-    @Column()
+    @Column({type:'varchar',length:50})
     nombre:string;
     
-    @Column()
+    @Column({type:'text',nullable:true})
     detalle:string;
 
     @OneToMany(()=>Producto, (prod)=>prod.categoria)
