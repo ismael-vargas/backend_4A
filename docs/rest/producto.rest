@@ -6,8 +6,13 @@ POST http://localhost:3000/producto
 Content-Type: application/json
 
 {
-    "nombre": "impresora Laser",
-    "precio": "500.95",
-    "stock": 12,
+    "nombre": "Mouse Gammer",
+    "precio": "510.92",
+    "stock": 10,
     "categoriaId": 1
 }
+
+### Busqueda por nombre
+GET http://localhost:3000/producto/back?page=1&q=pa&sort=asc
+
+
