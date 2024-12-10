@@ -1,24 +1,37 @@
 POST http://127.0.0.1:3000/auth/register
-Content-Type: application/json 
+Content-Type: application/json
 
 {
-    "name":"linavargas",
-    "mail":"lina@gmail.com",
-    "password": "123456"
+    "name": "lenin",
+    "mail": "lenin@gmail.com",
+    "password": "123456",
+    "roleId": 1
 }
+
 
 ### login sin conexion a BDD
 POST http://127.0.0.1:3000/auth/login
 Content-Type: application/json 
 
 {
-    "name":"linavargas",
-    "email":"lina@gmail.com",
+    "name": "lenin",
+    "email": "lenin@gmail.com",
+    "password": "123456",
+    "roleId": 1
+}
+### 
+
+POST http://127.0.0.1:3000/auth/login
+Content-Type: application/json
+
+{
+    "mail": "lina@gmail.com",
     "password": "123456"
 }
 
 
-### users
+### 
+
 
 GET http://127.0.0.1:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpbmFAZ21haWwuY29tIiwiaWQiOjEsImlhdCI6MTczMzI0MDUzMiwiZXhwIjoxNzMzMjQwNTkyfQ.3wd--Dsy_nI8g3t2ODmshKN2bg9TXdNmKCKHYBXwNNA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxlbmluQGdtYWlsLmNvbSIsInN1YiI6MiwiaWF0IjoxNzMzNzA4Mzc5LCJleHAiOjE3MzM3MDg0Mzl9.r33SJrRY1mA5htitKqUVJfUevK6fwLn6grAASoQkIfk

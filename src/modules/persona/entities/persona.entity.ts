@@ -1,18 +1,19 @@
-import { User } from "../../users/entities/user.entity";
-import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn } from 'typeorm';
+import { User } from '../../users/entities/user.entity';
 
-@Entity()
+@Entity('persona')
 export class Persona {
-    @PrimaryGeneratedColumn()
-    id:number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    nombres:string
+  @Column()
+  nombres: string;
 
-    @Column()
-    apellidos:string
+  @Column()
+  apellidos: string;
 
-    @OneToOne (()=>User, user=>user.persona)
-    @JoinColumn()
-    user:User
+  @OneToOne(() => Persona, (persona) => persona.user, { nullable: true })
+  persona: Persona;
+   
+  user: User; // Relación con User
 }

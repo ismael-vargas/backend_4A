@@ -1,0 +1,33 @@
+POST http://localhost:3000/roles
+Content-Type: application/json
+
+{
+  "nombre": "usuario",
+  "detalle": "acceso limitado"
+}
+
+
+### Obtener todos los roles
+GET http://localhost:3000/roles
+
+
+### Crear otro rol
+POST http://localhost:3000/roles
+Content-Type: application/json
+
+{
+  "nombre": "Usuario",
+  "detalle": "Acceso limitado al sistema"
+}
+
+
+
+
+### tytyty
+PUT http://localhost:3000/users/9/roles
+Content-Type: application/json
+
+{
+  "role_id": 1
+}
+

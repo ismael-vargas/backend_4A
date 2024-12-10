@@ -1,21 +1,21 @@
-import { Persona } from "../../persona/entities/persona.entity";
-import { Column,Entity, JoinColumn, OneToOne,PrimaryGeneratedColumn } from "typeorm";
+// user.entity.ts
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
+import { Role } from '../../role/entities/role.entity';
 
-@Entity()
+@Entity('users')
 export class User {
-    @PrimaryGeneratedColumn()
-    id:number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column({type:'varchar',length:50})
-    name:string;
+  @Column()
+  name: string;  // Cambiar "nombre" a "name"
 
-    @Column({type:'varchar',length: 255,unique:true})
-    mail:string;
-    
-    @Column({type:'varchar',length:200})
-    password:string;
+  @Column()
+  mail: string;
 
-    @OneToOne(()=>Persona, persona=>persona.user,{cascade:true})
-    persona:Persona;
+  @Column()
+  password: string;
 
+  @ManyToMany(() => Role, (role) => role.users)
+  roles: Role[];
 }

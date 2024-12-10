@@ -6,10 +6,10 @@ POST http://localhost:3000/producto
 Content-Type: application/json
 
 {
-    "nombre": "Mouse Gammer",
+    "nombre": "Play 5",
     "precio": "510.92",
     "stock": 10,
-    "categoriaId": 1
+    "categoriaId": 15
 }
 
 ### Busqueda por nombre
